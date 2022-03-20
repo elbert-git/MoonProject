@@ -2,7 +2,6 @@ const NodePolyFillPlugin = require('node-polyfill-webpack-plugin');
 const path = require('path');
  
 module.exports={
-	mode: 'development',
 	entry: {
 		main: path.resolve(__dirname, './src/index')
 	},
