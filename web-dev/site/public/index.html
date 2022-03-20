@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		 
+		<!-- css -->
+		<link rel="stylesheet" href="./stylesheet.css">
+		 
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400;600;900&display=swap" rel="stylesheet">
+		 
+		<!-- webpack -->
+		<script src="./main.bundle.js"></script>
+	</head>
+	<body>
+		<div class="main-parent league center-text">
+			<h1>Who Owns The Moon?</h1>
+			<p class="subtitle" >Where all web3 projects go</p>
+			<div class="scene-parent">
+				<a-scene embedded vr-mode-ui="enabled: false">
+					<a-assets>
+						<a-asset-item id="moon" src="./assets/moon/moon.gltf" ></a-asset-item>
+					</a-assets>
+					
+					<a-entity
+						gltf-model="#moon"
+						scale="10 10 10"
+						rotation="0 180 0"
+						animation="property: rotation; to: 0 -360; loop: true; dur: 40000; easing: linear"
+						></a-entity>
+					
+					<a-entity camera look-controls orbit-controls="
+						target: 0 0 0;
+						initialPosition: 0 0 17;
+						enableZoom: false;
+						enablePan: false;
+						maxPolarAngle: 160;
+						minPolarAngle: 20;
+						"
+						></a-entity>
+					 
+					<a-light type="directional" position="0 0 0" rotation="-90 0 0" target="#directionaltarget" intensity="4.0">
+							<a-entity id="directionaltarget" position="-1 0 -1"></a-entity>
+					</a-light>
+				</a-scene>
+			</div>
+			<h2>
+				<p style="font-size: 0.5em" >The moon currently belongs to:</p>
+				<p id="nameTag" >---</p>
+			</h2>
+			<button class="league purchase-button">Purchase</button>
+			<div style="height: 4rem"></div>
+			 
+			<!-- layer over -->
+			<div class="layer-over none">
+				<div class="overlay-bg">
+					<div class="card-bg none">Connecting to Metamask wallet...</div>
+					<div class="card-bg none">
+						<p>Metamask not found</p>
+						<p>Please go to <a href="https://www.metamask.io">metamask.io</a> to setup a metamask wallet</p>
+					</div>
+					<div class="card-bg none">
+						<p>What is your name?</p>
+						<div>
+							<input type="text"/>
+						</div>
+						<button class="final-purchase-button">Purchase</button>
+					</div>
+					<div class="card-bg">
+						<p>Transaction is being processed</p>
+						<p>You can return to this site after a minute or so</p>
+					</div>
+					<button class="return-from-overlay-button">return</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
