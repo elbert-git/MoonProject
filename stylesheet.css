@@ -119,6 +119,14 @@ h2 {
 .return-from-overlay-button {
 	border-color: grey;
 }
+ 
+input[type=text] {
+	background-color: #1a1c1c;
+	border: solid white 2px;
+	color: white;
+	font-family: 'League Spartan', sans-serif;
+	text-align: center;
+}
 
 
 

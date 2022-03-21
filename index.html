@@ -54,31 +54,14 @@
 				<p style="font-size: 0.5em" >The moon currently belongs to:</p>
 				<p id="nameTag" >---</p>
 			</h2>
-			<button class="league purchase-button">Purchase</button>
-			<div style="height: 4rem"></div>
 			 
-			<!-- layer over -->
-			<div class="layer-over none">
-				<div class="overlay-bg">
-					<div class="card-bg none">Connecting to Metamask wallet...</div>
-					<div class="card-bg none">
-						<p>Metamask not found</p>
-						<p>Please go to <a href="https://www.metamask.io">metamask.io</a> to setup a metamask wallet</p>
-					</div>
-					<div class="card-bg none">
-						<p>What is your name?</p>
-						<div>
-							<input type="text"/>
-						</div>
-						<button class="final-purchase-button">Purchase</button>
-					</div>
-					<div class="card-bg">
-						<p>Transaction is being processed</p>
-						<p>You can return to this site after a minute or so</p>
-					</div>
-					<button class="return-from-overlay-button">return</button>
-				</div>
-			</div>
+			<!-- purchase section -->
+			<hr style="width:80%; margin: 2em;"/>
+			<p style="font-size: 2rem; margin-bottom: 0.1em; margin">Purchase the moon</p>
+			<p style="font-size: 1rem; margin-bottom: 0.5em;">Your name</p>
+			<input id="nameInput" type="text"/>
+			<button id="firstPurcaseButton" class="league purchase-button">Purchase</button>
+			<div style="height: 4rem"></div>
 		</div>
 	</body>
 </html>
